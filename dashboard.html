@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Services - Active Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Active
+  * Template URL: https://bootstrapmade.com/active-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+<style id="extincao-dashboard-styles">
+
+:root{--bg:#0d1410;--panel:#17211b;--panel2:#1e2a23;--line:#34453a;--text:#edf6ef;--muted:#9fb0a5;--green:#a8ff45;--green2:#68d391;--yellow:#e5c65c;--orange:#ee9f4c;--red:#ef6a6a}
+*{box-sizing:border-box}.dashboard{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh;display:flex}
+.sidebar{width:270px;background:#111913;border-right:1px solid #27362e;padding:20px 16px;position:sticky;top:0;height:100vh;overflow:auto}.brand{display:flex;gap:10px;align-items:center;padding:6px 8px 22px}.brand-mark{width:40px;height:40px;border-radius:12px;background:var(--green);color:#0d1410;display:grid;place-items:center;font-weight:900}.brand strong{display:block;font-size:16px}.brand small{color:var(--muted)}.side-title{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin:18px 10px 8px}
+.nav-btn{width:100%;border:0;background:transparent;color:#cbd6ce;text-align:left;border-radius:12px;padding:10px 12px;margin:2px 0}.nav-btn:hover,.nav-btn.active{background:var(--green);color:#0c130f;font-weight:700}
+.filter-card{background:#151f19;border:1px solid var(--line);border-radius:16px;padding:14px}.filter-card label{font-size:12px;color:#bcc9c1;margin-bottom:5px}.form-select,.form-control{background:#0f1612!important;color:var(--text)!important;border:1px solid #3a4a40!important}.form-select:focus,.form-control:focus{border-color:var(--green)!important;box-shadow:0 0 0 .2rem rgba(168,255,69,.12)!important}.clear-btn{width:100%;margin-top:10px;border:1px solid #3a4a40;background:transparent;color:#d7e0da;border-radius:10px;padding:8px}.clear-btn:hover{color:var(--green);border-color:var(--green)}
+.content{flex:1;min-width:0;padding:20px 24px 30px}.topbar{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid #2c3b32;padding-bottom:16px;margin-bottom:16px}.topbar h1{font-size:26px;font-weight:800;margin:0}.topbar p{margin:4px 0 0;color:var(--muted);font-size:13px}.chip{border:1px solid #33433a;background:#152018;padding:8px 10px;border-radius:10px;color:#c4d0c8;font-size:11px;white-space:nowrap}
+.kpi{background:linear-gradient(180deg,#202b24,#18211d);border:1px solid var(--line);border-radius:16px;padding:15px;height:100%;box-shadow:0 8px 24px rgba(0,0,0,.12)}.kpi .icon{width:40px;height:40px;border-radius:11px;background:var(--green);color:#0d1410;display:grid;place-items:center;margin-bottom:10px}.kpi .label{font-size:11px;color:#aab8af}.kpi .value{font-size:26px;font-weight:800}.kpi .sub{font-size:10px;color:var(--green2)}
+.panel{background:#141d18;border:1px solid var(--line);border-radius:16px;overflow:hidden;height:100%;box-shadow:0 8px 24px rgba(0,0,0,.10)}.panel-head{padding:13px 15px 10px;border-bottom:1px solid #2b3a32;display:flex;justify-content:space-between;align-items:center;gap:10px}.panel-head h3{font-size:15px;margin:0;font-weight:750}.panel-head small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.panel-body{padding:13px 15px}.chart{height:280px}.chart.tall{height:330px}
+.map-box{height:330px;background:#0f1512;border:1px solid #2b3a32;border-radius:14px;position:relative;padding:8px}.map-title{position:absolute;left:10px;top:10px;z-index:2;border:1px solid #32423a;background:rgba(15,21,18,.9);padding:6px 8px;border-radius:9px;font-size:10px}.map-box svg{width:100%;height:100%}.biome{cursor:pointer;opacity:.9;stroke:#142119;stroke-width:2.5}.biome:hover,.biome.selected{opacity:1;filter:brightness(1.12)}.biome.selected{stroke:#fff;stroke-width:4}
+.legend{position:absolute;bottom:9px;left:11px;display:flex;flex-wrap:wrap;gap:6px;font-size:9px;color:#9aa89f}.legend span{display:flex;align-items:center;gap:4px}.legend i{display:inline-block;width:8px;height:8px;border-radius:50%}
+.insight{border:1px solid #2a3931;background:#111913;border-radius:12px;padding:11px;height:100%;display:flex;gap:9px}.insight .ico{width:34px;height:34px;border-radius:9px;background:rgba(168,255,69,.12);color:var(--green);display:grid;place-items:center;flex:0 0 auto}.insight h4{font-size:11px;margin:0 0 3px}.insight p{font-size:10px;color:#aab7ae;line-height:1.45;margin:0}
+.species-table{color:var(--text);margin:0}.species-table th{font-size:10px;color:#92a298;text-transform:uppercase;border-bottom:1px solid #2b3a32;padding:9px 8px}.species-table td{font-size:11px;border-bottom:1px solid #233129;padding:9px 8px}.status{display:inline-flex;border-radius:999px;padding:3px 7px;font-size:9px;font-weight:700}.danger{color:#ff9e9e;background:rgba(239,106,106,.13)}.warn{color:#ffc181;background:rgba(238,159,76,.13)}.watch{color:#f2dc7f;background:rgba(229,198,92,.12)}
+.footer{font-size:10px;color:#6f7e75;text-align:right;margin-top:14px}.mobile-toggle{display:none}
+@media(max-width:900px){.dashboard{display:block}.sidebar{position:fixed;left:-285px;z-index:1000;transition:.2s}.sidebar.open{left:0}.mobile-toggle{display:inline-flex;width:40px;height:40px;border:1px solid var(--line);background:#151f19;color:#fff;border-radius:10px;align-items:center;justify-content:center}.topbar{align-items:flex-start}}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+
+<body class="services-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="assets/img/logo.png" alt="">
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="app.html">Aplicativo</a></li>
+          <li><a href="dados.html">Dados de Extinção</a></li>
+          <li><a href="mostruario.html">Mostruário</a></li>
+		      <li class="dropdown"><a href="brasil.html"><span>Explore o Brasil</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Amazônia</a></li>            
+              <li><a href="#">Caatinga</a></li>
+              <li><a href="#">Cerrado</a></li>
+              <li><a href="#">Mata Atlântica</a></li>
+			        <li><a href="#">Pampa</a></li>
+              <li><a href="#">Pantanal</a></li>
+            </ul>
+          </li>
+          <li><a href="preserve.html">Preserve</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="dashboard">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brand-mark">Ø</div><div><strong>EXTINÇÃO ZERO</strong><small>Dashboard ambiental</small></div></div>
+  <div class="side-title">Análise</div>
+  <button class="nav-btn active"><i class="bi bi-grid-1x2-fill me-2"></i>Visão geral</button>
+  <button class="nav-btn"><i class="bi bi-paw-fill me-2"></i>Espécies</button>
+  <button class="nav-btn"><i class="bi bi-map-fill me-2"></i>Biomas</button>
+  <button class="nav-btn"><i class="bi bi-bar-chart-fill me-2"></i>Indicadores</button>
+  <div class="side-title">Filtros</div>
+  <div class="filter-card">
+    <label>Bioma</label><select id="biomeFilter" class="form-select form-select-sm mb-3"><option>Todos</option><option>Amazônia</option><option>Cerrado</option><option>Caatinga</option><option>Mata Atlântica</option><option>Pantanal</option><option>Pampa</option></select>
+    <label>Grupo animal</label><select id="groupFilter" class="form-select form-select-sm mb-3"><option>Todos</option><option>Mamíferos</option><option>Aves</option><option>Répteis</option><option>Anfíbios</option><option>Peixes</option></select>
+    <label>Status</label><select id="statusFilter" class="form-select form-select-sm"><option>Todos</option><option>Vulnerável</option><option>Em perigo</option><option>Criticamente ameaçada</option></select>
+    <button class="clear-btn" id="clearFilters"><i class="bi bi-arrow-counterclockwise me-1"></i>Limpar filtros</button>
+  </div>
+  <div class="side-title">Atalho</div>
+  <button class="nav-btn" onclick="document.getElementById('speciesSection').scrollIntoView({behavior:'smooth'})"><i class="bi bi-search me-2"></i>Explorar espécies</button>
+</aside>
+
+<main class="content">
+  <div class="topbar">
+    <div class="d-flex align-items-start gap-2"><button class="mobile-toggle" id="mobileToggle"><i class="bi bi-list"></i></button>
+      <div><h1>Dashboard <span style="font-weight:400;color:#95a59c">| Dados da Extinção</span></h1><p>Indicadores, ameaças e distribuição da fauna ameaçada.</p></div>
+    </div>
+    <div class="chip"><i class="bi bi-info-circle me-1"></i>Valores demonstrativos</div>
+  </div>
+
+  <div class="row g-3 mb-3">
+    <div class="col-12 col-md-6 col-xl-3"><div class="kpi"><div class="icon"><i class="bi bi-list-check"></i></div><div class="label">Espécies no recorte</div><div class="value" id="kpiTotal">18</div><div class="sub">filtros aplicados</div></div></div>
+    <div class="col-12 col-md-6 col-xl-3"><div class="kpi"><div class="icon"><i class="bi bi-exclamation-triangle-fill"></i></div><div class="label">Em perigo</div><div class="value" id="kpiDanger">7</div><div class="sub">prioridade de atenção</div></div></div>
+    <div class="col-12 col-md-6 col-xl-3"><div class="kpi"><div class="icon"><i class="bi bi-shield-exclamation"></i></div><div class="label">Criticamente ameaçadas</div><div class="value" id="kpiCritical">4</div><div class="sub">prioridade alta</div></div></div>
+    <div class="col-12 col-md-6 col-xl-3"><div class="kpi"><div class="icon"><i class="bi bi-tree-fill"></i></div><div class="label">Biomas no recorte</div><div class="value" id="kpiBiomes">6</div><div class="sub">distribuição</div></div></div>
+  </div>
+
+  <div class="row g-3 mb-3">
+    <div class="col-12 col-xl-8"><div class="panel"><div class="panel-head"><div><h3>Espécies ameaçadas por bioma</h3><small>Quantidade no recorte atual</small></div><span style="color:var(--green);font-size:10px"><i class="bi bi-bar-chart-fill me-1"></i>interativo</span></div><div class="panel-body"><div class="chart"><canvas id="biomeChart"></canvas></div></div></div></div>
+    <div class="col-12 col-xl-4"><div class="panel"><div class="panel-head"><div><h3>Status de conservação</h3><small>Distribuição das espécies</small></div></div><div class="panel-body"><div class="chart"><canvas id="statusChart"></canvas></div></div></div></div>
+  </div>
+
+  <div class="row g-3 mb-3">
+    <div class="col-12 col-xl-6"><div class="panel"><div class="panel-head"><div><h3>Distribuição por bioma</h3><small>Clique no mapa para aplicar filtro</small></div></div><div class="panel-body">
+      <div class="map-box">
+        <div class="map-title"><i class="bi bi-cursor-fill me-1"></i>Interativo</div>
+        <svg viewBox="0 0 620 430" aria-label="Mapa esquemático do Brasil">
+          <path class="biome" data-biome="Amazônia" fill="#234f3e" d="M105 95L185 58L270 72L329 98L318 160L251 168L205 205L140 180L92 136Z"/>
+          <path class="biome" data-biome="Cerrado" fill="#3d7b53" d="M270 168L318 160L370 175L390 231L342 268L272 248L244 207Z"/>
+          <path class="biome" data-biome="Caatinga" fill="#718c48" d="M318 98L400 95L457 124L441 169L390 175L350 160Z"/>
+          <path class="biome" data-biome="Mata Atlântica" fill="#58ad67" d="M390 175L441 169L480 204L458 257L405 263L370 231Z"/>
+          <path class="biome" data-biome="Pantanal" fill="#8aa95b" d="M205 205L244 207L272 248L244 292L192 274L177 242Z"/>
+          <path class="biome" data-biome="Pampa" fill="#a8c77a" d="M244 292L305 296L333 345L287 379L230 347Z"/>
+          <g fill="#d6ff7a" stroke="#101814" stroke-width="2"><circle cx="160" cy="128" r="7"/><circle cx="228" cy="105" r="6"/><circle cx="295" cy="202" r="10"/><circle cx="385" cy="139" r="8"/><circle cx="414" cy="211" r="12"/><circle cx="253" cy="241" r="6"/><circle cx="281" cy="323" r="8"/></g>
+          <text x="155" y="125" fill="#dce9df" font-size="14">AMAZÔNIA</text><text x="300" y="218" fill="#dce9df" font-size="14">CERRADO</text><text x="370" y="124" fill="#dce9df" font-size="13">CAATINGA</text><text x="398" y="237" fill="#dce9df" font-size="12">MATA ATLÂNTICA</text><text x="198" y="258" fill="#dce9df" font-size="12">PANTANAL</text><text x="266" y="340" fill="#27452f" font-size="12">PAMPA</text>
+        </svg>
+        <div class="legend"><span><i style="background:#234f3e"></i>Amazônia</span><span><i style="background:#3d7b53"></i>Cerrado</span><span><i style="background:#718c48"></i>Caatinga</span><span><i style="background:#58ad67"></i>Mata Atlântica</span><span><i style="background:#8aa95b"></i>Pantanal</span><span><i style="background:#a8c77a"></i>Pampa</span></div>
+      </div>
+    </div></div></div>
+    <div class="col-12 col-xl-6"><div class="panel"><div class="panel-head"><div><h3>Espécies por grupo animal</h3><small>Composição do recorte atual</small></div></div><div class="panel-body"><div class="chart"><canvas id="groupChart"></canvas></div></div></div></div>
+  </div>
+
+  <div class="row g-3 mb-3">
+    <div class="col-12 col-xl-7"><div class="panel"><div class="panel-head"><div><h3>Evolução das avaliações</h3><small>Indicador demonstrativo</small></div></div><div class="panel-body"><div class="chart"><canvas id="evolutionChart"></canvas></div></div></div></div>
+    <div class="col-12 col-xl-5"><div class="panel"><div class="panel-head"><div><h3>Principais ameaças</h3><small>Ocorrências no recorte</small></div></div><div class="panel-body"><div class="chart"><canvas id="threatChart"></canvas></div></div></div></div>
+  </div>
+
+  <div class="row g-3 mb-3">
+    <div class="col-12 col-md-4"><div class="insight"><div class="ico"><i class="bi bi-lightbulb-fill"></i></div><div><h4>Insight</h4><p id="insight1"></p></div></div></div>
+    <div class="col-12 col-md-4"><div class="insight"><div class="ico"><i class="bi bi-exclamation-triangle-fill"></i></div><div><h4>Prioridade</h4><p id="insight2"></p></div></div></div>
+    <div class="col-12 col-md-4"><div class="insight"><div class="ico"><i class="bi bi-funnel-fill"></i></div><div><h4>Filtros ativos</h4><p id="insight3"></p></div></div></div>
+  </div>
+
+  <div class="panel" id="speciesSection">
+    <div class="panel-head"><div><h3>Espécies em destaque</h3><small>Exemplo de dados para o protótipo</small></div><input id="searchSpecies" class="form-control form-control-sm" placeholder="Buscar espécie..." style="max-width:220px"></div>
+    <div class="table-responsive"><table class="table species-table mb-0"><thead><tr><th>Espécie</th><th>Grupo</th><th>Bioma</th><th>Status</th><th>Principal ameaça</th></tr></thead><tbody id="speciesBody"></tbody></table></div>
+  </div>
+  <div class="footer">Protótipo acadêmico — substitua os valores demonstrativos por dados reais e fontes oficiais na versão final.</div>
+</main></div>
+
+<script>
+const species=[
+{name:"Onça-pintada",group:"Mamíferos",biome:"Mata Atlântica",status:"Em perigo",threat:"Perda de habitat"},
+{name:"Mico-leão-dourado",group:"Mamíferos",biome:"Mata Atlântica",status:"Criticamente ameaçada",threat:"Perda de habitat"},
+{name:"Tamanduá-bandeira",group:"Mamíferos",biome:"Cerrado",status:"Vulnerável",threat:"Queimadas"},
+{name:"Lobo-guará",group:"Mamíferos",biome:"Cerrado",status:"Vulnerável",threat:"Perda de habitat"},
+{name:"Arara-azul-grande",group:"Aves",biome:"Pantanal",status:"Vulnerável",threat:"Tráfico"},
+{name:"Arara-azul-de-lear",group:"Aves",biome:"Caatinga",status:"Em perigo",threat:"Tráfico"},
+{name:"Soldadinho-do-araripe",group:"Aves",biome:"Caatinga",status:"Criticamente ameaçada",threat:"Perda de habitat"},
+{name:"Papagaio-chauá",group:"Aves",biome:"Mata Atlântica",status:"Vulnerável",threat:"Tráfico"},
+{name:"Tartaruga-de-pente",group:"Répteis",biome:"Mata Atlântica",status:"Criticamente ameaçada",threat:"Pesca"},
+{name:"Jararaca-ilhoa",group:"Répteis",biome:"Mata Atlântica",status:"Vulnerável",threat:"Perda de habitat"},
+{name:"Cágado-do-Paraíba",group:"Répteis",biome:"Mata Atlântica",status:"Em perigo",threat:"Poluição"},
+{name:"Axolote brasileiro",group:"Anfíbios",biome:"Mata Atlântica",status:"Em perigo",threat:"Poluição"},
+{name:"Rã-da-serra",group:"Anfíbios",biome:"Mata Atlântica",status:"Criticamente ameaçada",threat:"Perda de habitat"},
+{name:"Perereca-de-bromélia",group:"Anfíbios",biome:"Mata Atlântica",status:"Vulnerável",threat:"Mudança climática"},
+{name:"Pirarucu",group:"Peixes",biome:"Amazônia",status:"Vulnerável",threat:"Pesca"},
+{name:"Pirarara",group:"Peixes",biome:"Amazônia",status:"Em perigo",threat:"Pesca"},
+{name:"Dourado do Pantanal",group:"Peixes",biome:"Pantanal",status:"Vulnerável",threat:"Pesca"},
+{name:"Pato-mergulhão",group:"Aves",biome:"Cerrado",status:"Criticamente ameaçada",threat:"Poluição"}];
+
+const biomeOrder=["Amazônia","Cerrado","Caatinga","Mata Atlântica","Pantanal","Pampa"];
+const groupOrder=["Mamíferos","Aves","Répteis","Anfíbios","Peixes"];
+const statusOrder=["Vulnerável","Em perigo","Criticamente ameaçada"];
+const threatOrder=["Perda de habitat","Tráfico","Pesca","Queimadas","Poluição","Mudança climática"];
+let charts=[];
+const palette={green:"#a8ff45",yellow:"#e5c65c",orange:"#ee9f4c",red:"#ef6a6a",grid:"rgba(154,177,163,.12)"};
+
+function filters(){return{biome:biomeFilter.value,group:groupFilter.value,status:statusFilter.value}}
+function filtered(){const f=filters();return species.filter(s=>(f.biome==="Todos"||s.biome===f.biome)&&(f.group==="Todos"||s.group===f.group)&&(f.status==="Todos"||s.status===f.status))}
+function count(arr,key,order){return order.map(v=>arr.filter(x=>x[key]===v).length)}
+function resetCharts(){charts.forEach(c=>c.destroy());charts=[]}
+function base(){Chart.defaults.color="#c7d2ca";Chart.defaults.borderColor=palette.grid;Chart.defaults.font.family="Inter,system-ui,sans-serif"}
+function render(){
+  const data=filtered(), total=data.length;
+  kpiTotal.textContent=total;kpiDanger.textContent=data.filter(x=>x.status==="Em perigo").length;kpiCritical.textContent=data.filter(x=>x.status==="Criticamente ameaçada").length;kpiBiomes.textContent=new Set(data.map(x=>x.biome)).size;
+  resetCharts();base();
+  charts.push(new Chart(document.getElementById("biomeChart"),{type:"bar",data:{labels:biomeOrder,datasets:[{data:count(data,"biome",biomeOrder),backgroundColor:["#2f7d52","#4a9161","#718c48","#58ad67","#8aa95b","#a8c77a"],borderRadius:7}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,ticks:{stepSize:1}}}}}));
+  charts.push(new Chart(document.getElementById("statusChart"),{type:"doughnut",data:{labels:statusOrder,datasets:[{data:count(data,"status",statusOrder),backgroundColor:[palette.yellow,palette.orange,palette.red],borderColor:"#141d18",borderWidth:5}]},options:{responsive:true,maintainAspectRatio:false,cutout:"62%",plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10,font:{size:10}}}}}}));
+  charts.push(new Chart(document.getElementById("groupChart"),{type:"bar",data:{labels:groupOrder,datasets:[{data:count(data,"group",groupOrder),backgroundColor:palette.green,borderRadius:7,barThickness:18}]},options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{stepSize:1}},y:{grid:{display:false}}}}}));
+  const factor=Math.max(.45,total/18), ev=[42,46,51,57,62,68,72,79,84,91,98,106];
+  charts.push(new Chart(document.getElementById("evolutionChart"),{type:"line",data:{labels:["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],datasets:[{data:ev.map(v=>Math.round(v*factor)),borderColor:palette.green,backgroundColor:"rgba(168,255,69,.12)",fill:true,tension:.35,pointRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{beginAtZero:true}}}}));
+  charts.push(new Chart(document.getElementById("threatChart"),{type:"bar",data:{labels:threatOrder,datasets:[{data:threatOrder.map(t=>data.filter(x=>x.threat===t).length),backgroundColor:"#76b982",borderRadius:7,barThickness:14}]},options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{stepSize:1}},y:{grid:{display:false},ticks:{font:{size:9}}}}}}));
+  const top=biomeOrder.map(b=>[b,data.filter(x=>x.biome===b).length]).sort((a,b)=>b[1]-a[1])[0];
+  insight1.textContent=data.length?`${top[0]} concentra ${top[1]} espécie(s) no recorte demonstrativo.`:"Nenhuma espécie corresponde aos filtros.";
+  insight2.textContent=data.length?`${data.filter(x=>x.status==="Criticamente ameaçada").length} espécie(s) estão na categoria de maior prioridade deste recorte.`:"Ajuste os filtros.";
+  const f=filters(),active=[];if(f.biome!=="Todos")active.push(f.biome);if(f.group!=="Todos")active.push(f.group);if(f.status!=="Todos")active.push(f.status);
+  insight3.textContent=active.length?`Filtros ativos: ${active.join(" • ")}.`:"Nenhum filtro aplicado. Use a lateral ou clique no mapa.";
+  renderTable(data);document.querySelectorAll(".biome").forEach(x=>x.classList.toggle("selected",f.biome!=="Todos"&&x.dataset.biome===f.biome));
+}
+function renderTable(data){const q=searchSpecies.value.toLowerCase().trim(),rows=data.filter(s=>s.name.toLowerCase().includes(q));speciesBody.innerHTML=rows.map(s=>{const c=s.status==="Criticamente ameaçada"?"danger":s.status==="Em perigo"?"warn":"watch";return `<tr><td><strong>${s.name}</strong></td><td>${s.group}</td><td>${s.biome}</td><td><span class="status ${c}">${s.status}</span></td><td>${s.threat}</td></tr>`}).join("")}
+["biomeFilter","groupFilter","statusFilter"].forEach(id=>document.getElementById(id).addEventListener("change",render));
+searchSpecies.addEventListener("input",()=>renderTable(filtered()));
+clearFilters.addEventListener("click",()=>{biomeFilter.value="Todos";groupFilter.value="Todos";statusFilter.value="Todos";searchSpecies.value="";render()});
+document.querySelectorAll(".biome").forEach(el=>el.addEventListener("click",()=>{biomeFilter.value=el.dataset.biome;render();}));
+mobileToggle.addEventListener("click",()=>sidebar.classList.toggle("open"));
+render();
+</script>
+    <script>
+    const species=[
+{name:"Onça-pintada",group:"Mamíferos",biome:"Mata Atlântica",status:"Em perigo",threat:"Perda de habitat"},
+{name:"Mico-leão-dourado",group:"Mamíferos",biome:"Mata Atlântica",status:"Criticamente ameaçada",threat:"Perda de habitat"},
+{name:"Tamanduá-bandeira",group:"Mamíferos",biome:"Cerrado",status:"Vulnerável",threat:"Queimadas"},
+{name:"Lobo-guará",group:"Mamíferos",biome:"Cerrado",status:"Vulnerável",threat:"Perda de habitat"},
+{name:"Arara-azul-grande",group:"Aves",biome:"Pantanal",status:"Vulnerável",threat:"Tráfico"},
+{name:"Arara-azul-de-lear",group:"Aves",biome:"Caatinga",status:"Em perigo",threat:"Tráfico"},
+{name:"Soldadinho-do-araripe",group:"Aves",biome:"Caatinga",status:"Criticamente ameaçada",threat:"Perda de habitat"},
+{name:"Papagaio-chauá",group:"Aves",biome:"Mata Atlântica",status:"Vulnerável",threat:"Tráfico"},
+{name:"Tartaruga-de-pente",group:"Répteis",biome:"Mata Atlântica",status:"Criticamente ameaçada",threat:"Pesca"},
+{name:"Jararaca-ilhoa",group:"Répteis",biome:"Mata Atlântica",status:"Vulnerável",threat:"Perda de habitat"},
+{name:"Cágado-do-Paraíba",group:"Répteis",biome:"Mata Atlântica",status:"Em perigo",threat:"Poluição"},
+{name:"Axolote brasileiro",group:"Anfíbios",biome:"Mata Atlântica",status:"Em perigo",threat:"Poluição"},
+{name:"Rã-da-serra",group:"Anfíbios",biome:"Mata Atlântica",status:"Criticamente ameaçada",threat:"Perda de habitat"},
+{name:"Perereca-de-bromélia",group:"Anfíbios",biome:"Mata Atlântica",status:"Vulnerável",threat:"Mudança climática"},
+{name:"Pirarucu",group:"Peixes",biome:"Amazônia",status:"Vulnerável",threat:"Pesca"},
+{name:"Pirarara",group:"Peixes",biome:"Amazônia",status:"Em perigo",threat:"Pesca"},
+{name:"Dourado do Pantanal",group:"Peixes",biome:"Pantanal",status:"Vulnerável",threat:"Pesca"},
+{name:"Pato-mergulhão",group:"Aves",biome:"Cerrado",status:"Criticamente ameaçada",threat:"Poluição"}];
+
+const biomeOrder=["Amazônia","Cerrado","Caatinga","Mata Atlântica","Pantanal","Pampa"];
+const groupOrder=["Mamíferos","Aves","Répteis","Anfíbios","Peixes"];
+const statusOrder=["Vulnerável","Em perigo","Criticamente ameaçada"];
+const threatOrder=["Perda de habitat","Tráfico","Pesca","Queimadas","Poluição","Mudança climática"];
+let charts=[];
+const palette={green:"#a8ff45",yellow:"#e5c65c",orange:"#ee9f4c",red:"#ef6a6a",grid:"rgba(154,177,163,.12)"};
+
+function filters(){return{biome:biomeFilter.value,group:groupFilter.value,status:statusFilter.value}}
+function filtered(){const f=filters();return species.filter(s=>(f.biome==="Todos"||s.biome===f.biome)&&(f.group==="Todos"||s.group===f.group)&&(f.status==="Todos"||s.status===f.status))}
+function count(arr,key,order){return order.map(v=>arr.filter(x=>x[key]===v).length)}
+function resetCharts(){charts.forEach(c=>c.destroy());charts=[]}
+function base(){Chart.defaults.color="#c7d2ca";Chart.defaults.borderColor=palette.grid;Chart.defaults.font.family="Inter,system-ui,sans-serif"}
+function render(){
+  const data=filtered(), total=data.length;
+  kpiTotal.textContent=total;kpiDanger.textContent=data.filter(x=>x.status==="Em perigo").length;kpiCritical.textContent=data.filter(x=>x.status==="Criticamente ameaçada").length;kpiBiomes.textContent=new Set(data.map(x=>x.biome)).size;
+  resetCharts();base();
+  charts.push(new Chart(document.getElementById("biomeChart"),{type:"bar",data:{labels:biomeOrder,datasets:[{data:count(data,"biome",biomeOrder),backgroundColor:["#2f7d52","#4a9161","#718c48","#58ad67","#8aa95b","#a8c77a"],borderRadius:7}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,ticks:{stepSize:1}}}}}));
+  charts.push(new Chart(document.getElementById("statusChart"),{type:"doughnut",data:{labels:statusOrder,datasets:[{data:count(data,"status",statusOrder),backgroundColor:[palette.yellow,palette.orange,palette.red],borderColor:"#141d18",borderWidth:5}]},options:{responsive:true,maintainAspectRatio:false,cutout:"62%",plugins:{legend:{position:"bottom",labels:{boxWidth:10,padding:10,font:{size:10}}}}}}));
+  charts.push(new Chart(document.getElementById("groupChart"),{type:"bar",data:{labels:groupOrder,datasets:[{data:count(data,"group",groupOrder),backgroundColor:palette.green,borderRadius:7,barThickness:18}]},options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{stepSize:1}},y:{grid:{display:false}}}}}));
+  const factor=Math.max(.45,total/18), ev=[42,46,51,57,62,68,72,79,84,91,98,106];
+  charts.push(new Chart(document.getElementById("evolutionChart"),{type:"line",data:{labels:["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],datasets:[{data:ev.map(v=>Math.round(v*factor)),borderColor:palette.green,backgroundColor:"rgba(168,255,69,.12)",fill:true,tension:.35,pointRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{beginAtZero:true}}}}));
+  charts.push(new Chart(document.getElementById("threatChart"),{type:"bar",data:{labels:threatOrder,datasets:[{data:threatOrder.map(t=>data.filter(x=>x.threat===t).length),backgroundColor:"#76b982",borderRadius:7,barThickness:14}]},options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{beginAtZero:true,ticks:{stepSize:1}},y:{grid:{display:false},ticks:{font:{size:9}}}}}}));
+  const top=biomeOrder.map(b=>[b,data.filter(x=>x.biome===b).length]).sort((a,b)=>b[1]-a[1])[0];
+  insight1.textContent=data.length?`${top[0]} concentra ${top[1]} espécie(s) no recorte demonstrativo.`:"Nenhuma espécie corresponde aos filtros.";
+  insight2.textContent=data.length?`${data.filter(x=>x.status==="Criticamente ameaçada").length} espécie(s) estão na categoria de maior prioridade deste recorte.`:"Ajuste os filtros.";
+  const f=filters(),active=[];if(f.biome!=="Todos")active.push(f.biome);if(f.group!=="Todos")active.push(f.group);if(f.status!=="Todos")active.push(f.status);
+  insight3.textContent=active.length?`Filtros ativos: ${active.join(" • ")}.`:"Nenhum filtro aplicado. Use a lateral ou clique no mapa.";
+  renderTable(data);document.querySelectorAll(".biome").forEach(x=>x.classList.toggle("selected",f.biome!=="Todos"&&x.dataset.biome===f.biome));
+}
+function renderTable(data){const q=searchSpecies.value.toLowerCase().trim(),rows=data.filter(s=>s.name.toLowerCase().includes(q));speciesBody.innerHTML=rows.map(s=>{const c=s.status==="Criticamente ameaçada"?"danger":s.status==="Em perigo"?"warn":"watch";return `<tr><td><strong>${s.name}</strong></td><td>${s.group}</td><td>${s.biome}</td><td><span class="status ${c}">${s.status}</span></td><td>${s.threat}</td></tr>`}).join("")}
+["biomeFilter","groupFilter","statusFilter"].forEach(id=>document.getElementById(id).addEventListener("change",render));
+searchSpecies.addEventListener("input",()=>renderTable(filtered()));
+clearFilters.addEventListener("click",()=>{biomeFilter.value="Todos";groupFilter.value="Todos";statusFilter.value="Todos";searchSpecies.value="";render()});
+document.querySelectorAll(".biome").forEach(el=>el.addEventListener("click",()=>{biomeFilter.value=el.dataset.biome;render();}));
+mobileToggle.addEventListener("click",()=>sidebar.classList.toggle("open"));
+render();
+    </script>
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading">About Us</h3>
+            <p class="mb-4">
+              There live the blind texts. Separated they live in Bookmarksgrove
+              right at the coast of the Semantics, a large language ocean.
+            </p>
+            <p class="mb-0">
+              <a href="#" class="btn-learn-more">Learn more</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading">Navigation</h3>
+            <ul class="list-unstyled float-start me-5">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Find Buyers</a></li>
+            </ul>
+            <ul class="list-unstyled float-start">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading">Recent Posts</h3>
+            <ul class="list-unstyled footer-blog-entry">
+              <li>
+                <span class="d-block date">May 3, 2020</span>
+                <a href="#">There live the Blind Texts</a>
+              </li>
+              <li>
+                <span class="d-block date">May 3, 2020</span>
+                <a href="#">Separated they live in Bookmarksgrove right</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading">Connect</h3>
+            <ul class="list-unstyled social-icons light mb-3">
+              <li>
+                <a href="#"><span class="bi bi-facebook"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="bi bi-twitter-x"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="bi bi-linkedin"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="bi bi-google"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="bi bi-google-play"></span></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="widget">
+            <div class="footer-subscribe">
+              <h3 class="widget-heading">Subscribe</h3>
+              <form action="forms/newsletter.php" method="post" class="php-email-form">
+                <div class="mb-2">
+                  <input type="text" class="form-control" name="email" placeholder="Enter your email">
+
+                  <button type="submit" class="btn btn-link">
+                    <span class="bi bi-arrow-right"></span>
+                  </button>
+                </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">
+                  Your subscription request has been sent. Thank you!
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Active.</strong> <span>All Rights Reserved</span></p>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
